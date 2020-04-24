@@ -1,0 +1,30 @@
+{
+  "name": "jest-example",
+  "version": "1.0.0",
+  "description": "How to debug in jest tests",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/inigomarquinez/howto-vscode-config-for-test-debugging.git"
+  },
+  "keywords": [
+    "howto",
+    "vscode",
+    "jest",
+    "debug",
+    "test"
+  ],
+  "author": "Íñigo Marquínez",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/inigomarquinez/howto-vscode-config-for-test-debugging/issues"
+  },
+  "homepage": "https://github.com/inigomarquinez/howto-vscode-config-for-test-debugging#readme",
+  "dependencies": {},
+  "devDependencies": {
+    "jest": "^25.4.0"
+  }
+}
