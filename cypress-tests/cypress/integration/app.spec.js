@@ -7,6 +7,6 @@ describe("App", function() {
   });
 
   it("renders the app", function() {
-    cy.get(".App-link").should("contain", "Learn React");
+    cy.get("[data-cy=state]").should("contain", "State:");
   });
 });
