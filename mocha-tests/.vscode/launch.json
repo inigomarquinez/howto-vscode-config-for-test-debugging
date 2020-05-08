@@ -1,0 +1,94 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    // Configuration used to debug the application (default configuration created by Visual Studio Code )
+    {
+      "type": "node",
+      "request": "launch",
+      "name": "Launch Program",
+      "presentation": {
+        "order": 1
+      },
+      "skipFiles": [
+        "<node_internals>/**"
+      ],
+      "program": "${workspaceFolder}/index.js"
+    },
+    // Configuration used to debug all the tests under a common "test" directory
+    {
+      "type": "node",
+      "request": "launch",
+      "name": "Mocha All under 'test' folder",
+      "presentation": {
+        "order": 2
+      },
+      "program": "${workspaceFolder}/node_modules/mocha/bin/_mocha",
+      "args": [
+        "--timeout",
+        "999999",
+        "--colors",
+        "${workspaceFolder}/test"
+      ],
+      "console": "integratedTerminal",
+      "internalConsoleOptions": "neverOpen"
+    },
+    // Configuration used to debug all the tests matching "*.test.js" files except for those that are in a node_modules directory
+    {
+      "type": "node",
+      "request": "launch",
+      "name": "Mocha All matching '*.test.js'",
+      "presentation": {
+        "order": 3
+      },
+      "program": "${workspaceFolder}/node_modules/mocha/bin/_mocha",
+      "args": [
+        "--timeout",
+        "999999",
+        "--colors",
+        //"'${workspaceFolder}/{,!(node_modules)/}*/*.test.js'"
+        // "\"${workspaceFolder}/{,!(node_modules)/**}/*.test.js\""
+          "\"${workspaceFolder}/{,!(node_modules)/**}/*.test.js\""
+      ],
+      "console": "integratedTerminal",
+      "internalConsoleOptions": "neverOpen"
+    },
+    // Same as above but using a "mocha.opts" file that stores multiple arguments used by mocha
+    {
+      "type": "node",
+      "request": "launch",
+      "name": "Mocha with options",
+      "presentation": {
+        "order": 4
+      },
+      "program": "${workspaceFolder}/node_modules/mocha/bin/_mocha",
+      // "args": [
+      //   "--opts",
+      //   "${workspaceFolder}/mocha.opts",
+      // ],
+      "args": [
+        "--config",
+        "${workspaceFolder}/.mocharc.json",
+      ],
+      "console": "integratedTerminal",
+      "internalConsoleOptions": "neverOpen"
+    },
+    // Configuration used to debug the test you're currently editing
+    {
+      "type": "node",
+      "request": "launch",
+      "name": "Mocha Current File",
+      "presentation": {
+        "order": 5
+      },
+      "program": "${workspaceFolder}/node_modules/mocha/bin/_mocha",
+      "args": [
+        "--timeout",
+        "999999",
+        "--colors",
+        "${file}"
+      ],
+      "console": "integratedTerminal",
+      "internalConsoleOptions": "neverOpen"
+    },
+  ]
+}

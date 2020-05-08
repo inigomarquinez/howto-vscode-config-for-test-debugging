@@ -1,10 +1,10 @@
 {
-  "name": "jest-example",
+  "name": "mocha-tests",
   "version": "1.0.0",
-  "description": "How to debug in jest tests",
+  "description": "How to debug mocha tests",
   "main": "index.js",
   "scripts": {
-    "test": "jest"
+    "test": "mocha"
   },
   "repository": {
     "type": "git",
@@ -13,7 +13,7 @@
   "keywords": [
     "howto",
     "vscode",
-    "jest",
+    "mocha",
     "debug",
     "test"
   ],
@@ -25,6 +25,6 @@
   "homepage": "https://github.com/inigomarquinez/howto-vscode-config-for-test-debugging#readme",
   "dependencies": {},
   "devDependencies": {
-    "jest": "^25.4.0"
+    "mocha": "^7.1.2"
   }
 }

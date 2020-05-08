@@ -1,6 +1,7 @@
 {
   "version": "0.2.0",
   "configurations": [
+    // Configuration used to debug the application (default configuration created by Visual Studio Code )
     {
       "type": "node",
       "request": "launch",
@@ -10,7 +11,7 @@
       ],
       "program": "${workspaceFolder}/index.js"
     },
-
+    // Configuration used to debug all the tests
     {
       "type": "node",
       "request": "launch",
@@ -24,6 +25,7 @@
         "program": "${workspaceFolder}/node_modules/jest/bin/jest",
       }
     },
+    // Configuration used to debug the test you're currently editing
     {
       "type": "node",
       "request": "launch",
