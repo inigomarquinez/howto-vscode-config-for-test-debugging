@@ -9,12 +9,20 @@ function App() {
     console.log('New state', state);
   }, [state]);
 
+  const handleClick = () => {
+    setState(prevState => !prevState);
+  }
+
   return (
     <div className="App">
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
-        <h1 data-cy="state">State: {state ? "Active" : "Inactive"}</h1>
-        <button onClick={() => setState(prevState => !prevState)}>Toggle State</button>
+        <h1 data-cy="state-label">
+          State: {state ? "Active" : "Inactive"}
+        </h1>
+        <button data-cy="button" onClick={handleClick}>
+          Toggle State
+        </button>
       </header>
     </div>
   );

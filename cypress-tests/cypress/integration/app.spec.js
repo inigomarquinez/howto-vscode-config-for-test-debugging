@@ -7,6 +7,9 @@ describe("App", function() {
   });
 
   it("renders the app", function() {
-    cy.get("[data-cy=state]").should("contain", "State:");
+    cy.get("[data-cy=state-label]").should("contain", "State: Inactive");
+    cy.get("[data-cy=button]").click();
+    debugger;
+    cy.get("[data-cy=state-label]").should("contain", "State: Active");
   });
 });

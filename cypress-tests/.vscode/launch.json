@@ -16,10 +16,10 @@
       "name": "Attach to Cypress",
       "port": 9222,
       "url": "http://localhost*",
-      "webRoot": "${workspaceFolder}",
+      "webRoot": "${workspaceFolder}/src",
       "sourceMaps": true,
       "skipFiles": [
-          "cypress_runner.js",
+        "cypress_runner.js",
       ],
     }
   ]
