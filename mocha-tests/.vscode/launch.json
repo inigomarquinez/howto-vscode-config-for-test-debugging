@@ -1,7 +1,8 @@
 {
   "version": "0.2.0",
   "configurations": [
-    // Configuration used to debug the application (default configuration created by Visual Studio Code )
+    // Configuration used to debug the application
+    // (default configuration created by Visual Studio Code )
     {
       "type": "node",
       "request": "launch",
@@ -32,27 +33,8 @@
       "console": "integratedTerminal",
       "internalConsoleOptions": "neverOpen"
     },
-    // Configuration used to debug all the tests matching "*.test.js" files except for those that are in a node_modules directory
-    {
-      "type": "node",
-      "request": "launch",
-      "name": "Mocha All matching '*.test.js'",
-      "presentation": {
-        "order": 3
-      },
-      "program": "${workspaceFolder}/node_modules/mocha/bin/_mocha",
-      "args": [
-        "--timeout",
-        "999999",
-        "--colors",
-        //"'${workspaceFolder}/{,!(node_modules)/}*/*.test.js'"
-        // "\"${workspaceFolder}/{,!(node_modules)/**}/*.test.js\""
-          "\"${workspaceFolder}/{,!(node_modules)/**}/*.test.js\""
-      ],
-      "console": "integratedTerminal",
-      "internalConsoleOptions": "neverOpen"
-    },
-    // Same as above but using a "mocha.opts" file that stores multiple arguments used by mocha
+    // Configuration used to debug all the tests matching "*.test.js" files except for those that
+    // are in a node_modules directory using a mocha configuration file
     {
       "type": "node",
       "request": "launch",
@@ -61,10 +43,6 @@
         "order": 4
       },
       "program": "${workspaceFolder}/node_modules/mocha/bin/_mocha",
-      // "args": [
-      //   "--opts",
-      //   "${workspaceFolder}/mocha.opts",
-      // ],
       "args": [
         "--config",
         "${workspaceFolder}/.mocharc.json",
