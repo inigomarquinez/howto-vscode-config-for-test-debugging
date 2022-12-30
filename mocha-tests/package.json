@@ -25,6 +25,6 @@
   "homepage": "https://github.com/inigomarquinez/howto-vscode-config-for-test-debugging#readme",
   "dependencies": {},
   "devDependencies": {
-    "mocha": "^7.1.2"
+    "mocha": "^10.2.0"
   }
 }
