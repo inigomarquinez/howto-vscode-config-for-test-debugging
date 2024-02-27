@@ -25,6 +25,6 @@
   "homepage": "https://github.com/inigomarquinez/howto-vscode-config-for-test-debugging#readme",
   "dependencies": {},
   "devDependencies": {
-    "jest": "^25.4.0"
+    "jest": "^29.7.0"
   }
 }
